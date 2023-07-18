@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <link href="shared.css" rel="stylesheet">
+    <title>ASSIGNMENT_GRADER</title>
+</head>
+<body>
+    <nav class="navbar" id="top">
+        <ul>
+            <li><a href="#top">Assignment Grader</a></li>
+            
+            <li class="mid"><a href="index.html" class="active">Home</a></li>
+            <li ><a href="results.html">Results</a></li>
+            <li ><a href="profile.html">Profile</a></li>
+            
+            <li class="last"><a  href="index2.html" >User</a></li>
+            
+        </ul>
+    </nav>
+    <h2>NEW ASSIGNMENTS:</h2>
+    <div class="card">
+        <div class="card-body">
+          <div class="info">
+             <h3>Assignment name: </h3>
+             <h3>Assignment given: </h3>
+             <h3>Due date: </h3>
+          </div>
+          <div class="info">
+            <button type="submit" onclick="openform()" class="open-button"> Submit </button>
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <h1>Login</h1>
+              
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+              
+                  <button type="submit" class="btn">Login</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                 </form>
+              </div>
+          </div>
+        </div>
+    </div>
+    <script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
+    
+</body>
+</html>
