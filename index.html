@@ -28,34 +28,27 @@
              <h3>Assignment given: </h3>
              <h3>Due date: </h3>
           </div>
-          <div class="info">
-            <button type="submit" onclick="openform()" class="open-button"> Submit </button>
-            <div class="form-popup" id="myForm">
-                <form action="/action_page.php" class="form-container">
-                  <h1>Login</h1>
-              
-                  <label for="email"><b>Email</b></label>
-                  <input type="text" placeholder="Enter Email" name="email" required>
-              
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required>
-              
-                  <button type="submit" class="btn">Login</button>
-                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                 </form>
-              </div>
-          </div>
-        </div>
-    </div>
-    <script>
-    function openForm() {
-        document.getElementById("myForm").style.display = "block";
-      }
-      
-      function closeForm() {
-        document.getElementById("myForm").style.display = "none";
-      }
-    </script>
+          <button data-open-modal>Submit Assignment</button>
+          <dialog data-modal>
+          <form> 
+          <input type="text" name="sname" id="sname" placeholder="Enter your name"/><Br><br>
+          <input type="text" name="regno" id="regno" placeholder="Enter your regno"/><br><br>
+          <input type="file" name="file" ><br>
+          <button type-"submit" formmethod-"dialog" > Cancel</button> <br>
+          <button type="submit">Submit</button><br>
+          </form> 
+          </dialog>
+          <script>
+          const openButton = document .querySelector (" [data-open-modal]")
+          const closeButton = document. querySelector (" [data-close-modal]")
+          const modal = document. querySelector("[data-modal]")
+          openButton.addEventListener("click", () => {
+          modal.showModal()
+          })
+          closeButton. addEventListener("click", () => {
+          modal.close ( )
+          })
+          </script>
     
 </body>
 </html>
